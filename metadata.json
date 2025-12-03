@@ -1,0 +1,5 @@
+{
+  "name": "Junior Bug-Fixing Agent",
+  "description": "An autonomous AI developer agent dashboard that mimics GitHub's interface to track, analyze, and fix bugs.",
+  "requestFramePermissions": []
+}
