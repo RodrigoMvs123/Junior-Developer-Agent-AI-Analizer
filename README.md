@@ -1,4 +1,4 @@
-# Junior Bug-Fixing Agent
+# Junior Developer Agent AI Analizer
 
 An autonomous AI developer agent dashboard that mimics GitHub's interface to track, analyze, and fix bugs. It uses the Google Gemini API to analyze issue descriptions and propose solutions.
 
