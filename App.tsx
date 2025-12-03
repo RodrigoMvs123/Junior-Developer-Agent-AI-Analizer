@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { BugTicket, AgentActivity } from './types';
-import Dashboard from './components/Dashboard';
-import BugDetail from './components/BugDetail';
-import ActivityFeed from './components/ActivityFeed';
+import Dashboard from './Dashboard';
+import BugDetail from './BugDetail';
+import ActivityFeed from './ActivityFeed';
 import { Zap, Menu, Github } from 'lucide-react';
-import { fetchGithubIssues, parseRepoUrl } from './services/githubService';
+import { fetchGithubIssues, parseRepoUrl } from './githubService';
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<'dashboard' | 'bug-detail'>('dashboard');

@@ -1,4 +1,4 @@
-import { BugTicket, Severity, Status } from '../types';
+import { BugTicket, Severity, Status } from './types';
 
 export const parseRepoUrl = (url: string): { owner: string; repo: string } | null => {
   try {

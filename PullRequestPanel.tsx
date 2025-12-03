@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckCircle2, XCircle, FileCode, GitPullRequest, ExternalLink, ShieldCheck, Terminal } from 'lucide-react';
-import { PullRequest, BugTicket } from '../types';
+import { PullRequest, BugTicket } from './types';
 
 interface PullRequestPanelProps {
   pr: PullRequest;

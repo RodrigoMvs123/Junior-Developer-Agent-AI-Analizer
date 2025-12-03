@@ -1,6 +1,6 @@
 import React from 'react';
 import { GitCommit, Search, MessageSquare, GitPullRequest, Activity, Trash2 } from 'lucide-react';
-import { AgentActivity } from '../types';
+import { AgentActivity } from './types';
 
 interface ActivityFeedProps {
   activities: AgentActivity[];

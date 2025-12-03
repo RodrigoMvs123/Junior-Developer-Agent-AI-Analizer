@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { BugTicket, AnalysisResult } from '../types';
-import { analyzeBugWithGemini } from '../services/geminiService';
+import { BugTicket, AnalysisResult } from './types';
+import { analyzeBugWithGemini } from './geminiService';
 import { AlertCircle, Clock, Cpu, ExternalLink, FileText, Copy, Check, Github, CheckCircle2 } from 'lucide-react';
 
 interface BugDetailProps {

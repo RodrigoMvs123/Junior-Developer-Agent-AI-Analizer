@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BugTicket } from '../types';
+import { BugTicket } from './types';
 import { AlertCircle, CheckCircle2, Clock, Github, Search, Loader2, GitPullRequest, Trash2, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface DashboardProps {
