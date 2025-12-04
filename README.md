@@ -25,7 +25,7 @@ An autonomous AI developer agent dashboard that mimics GitHub's interface to tra
 2.  **Environment Setup**
     Create a `.env` file in the root directory:
     ```env
-    API_KEY=your_google_api_key_here
+    VITE_API_KEY=your_api_key_here
     ```
 
 3.  **Run Development Server**
