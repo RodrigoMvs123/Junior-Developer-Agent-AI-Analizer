@@ -2,6 +2,9 @@
 
 An autonomous AI developer agent dashboard that mimics GitHub's interface to track, analyze, and fix bugs. It uses the Google Gemini API to analyze issue descriptions and propose solutions.
 
+**Project Live at** 
+- https://junior-developer-agent-ai-analizer.vercel.app/ 
+
 ## Features
 
 - **GitHub Interface**: A dashboard styled like GitHub dark mode.
