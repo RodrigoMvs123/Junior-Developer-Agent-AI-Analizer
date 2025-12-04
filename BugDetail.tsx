@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BugTicket, AnalysisResult } from './types';
-import { analyzeBugWithGemini } from './geminiService';
+import { analyzeBugWithAI } from './aiService';
 import { AlertCircle, Clock, Cpu, ExternalLink, FileText, Copy, Check, Github, CheckCircle2 } from 'lucide-react';
 
 interface BugDetailProps {
@@ -19,15 +19,16 @@ const BugDetail: React.FC<BugDetailProps> = ({ bug, onBack, onAddActivity, onRes
   const handleAnalyze = async () => {
     setAnalyzing(true);
     setErrorMessage(null);
-    onAddActivity("Started Analysis", `Analyzing bug #${bug.id} using Gemini 2.5 Flash`, 'analysis');
+    onAddActivity("Started Analysis", `Analyzing bug #${bug.id} using Amazon Nova 2 Lite`, 'analysis');
     try {
-      const result = await analyzeBugWithGemini(bug.title, bug.description, bug.repository);
+      const result = await analyzeBugWithAI(bug.title, bug.description, bug.repository);
       setAnalysis(result);
       onAddActivity("Analysis Complete", "Root cause identified and solution proposed.", 'analysis');
-    } catch (error) {
-      console.error(error);
-      setErrorMessage("Analysis failed. Please try again.");
-      onAddActivity("Analysis Failed", "Could not complete AI analysis.", 'system');
+    } catch (error: any) {
+      console.error('Analysis error:', error);
+      const errorMsg = error?.message || "Analysis failed. Please try again.";
+      setErrorMessage(errorMsg);
+      onAddActivity("Analysis Failed", `Error: ${errorMsg}`, 'system');
     } finally {
       setAnalyzing(false);
     }
